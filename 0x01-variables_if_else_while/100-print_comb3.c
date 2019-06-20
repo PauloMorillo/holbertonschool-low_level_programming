@@ -24,7 +24,7 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-			b2=b2+1;
+			b2 = b2 + 1;
 		}
 		b2 = '0';
 		n = n + 1;
