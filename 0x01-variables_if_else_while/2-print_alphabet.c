@@ -1,11 +1,18 @@
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	char n="qwert";
+	char n = 'a';
 
-	putc(n);
+	while (n <= 'z')
+	{
+		putchar(n);
+		n = n + 1;
+	}
+	putchar('\n');
 	return (0);
 }
