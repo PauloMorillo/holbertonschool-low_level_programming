@@ -14,6 +14,7 @@ int main(void)
 		if (n <= '8')
 		{
 			putchar(',');
+			putchar(' ');
 		}
 		n = n + 1;
 	}
