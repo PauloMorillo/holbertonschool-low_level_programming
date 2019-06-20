@@ -1,0 +1,1 @@
+this folder has the excercise to learn about variables,if,else,while
