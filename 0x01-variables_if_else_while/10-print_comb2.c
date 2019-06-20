@@ -8,7 +8,6 @@ int main(void)
 {
 	signed int n = '0';
 	signed int b2 = '0';
-	signed int n3 = '0';
 
 	while (n <= '9')
 	{
