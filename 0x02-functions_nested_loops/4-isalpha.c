@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <ctype.h>
 /**
  * _isalpha - returns 1 if is alpha else returns 0.
  * @c: The character to print
@@ -9,15 +8,20 @@
  */
 int _isalpha(int c)
 {
-	int res;
-
-	res = isalpha(c);
-	if (res == 0)
+	if (c < 123  && c > 60)
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
+		return (0);
+	}
+	if (c < 91 && c > 64)
+	{
 		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }
