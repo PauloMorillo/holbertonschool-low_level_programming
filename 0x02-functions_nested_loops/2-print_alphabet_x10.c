@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_alphabet_x10 - writes the alphabet between a to z in 5 lines.
+ *
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -11,17 +11,16 @@ void print_alphabet_x10(void)
 {
 	int a2 = 0;
 
-	while(a2 < 10)
+	while (a2 < 10)
 	{
-
-		char a ='a';
+		char a = 'a';
 
 		while (a <= 'z')
 		{
 			_putchar(a);
-			a=a+1;
+			a = a + 1;
 		}
 		_putchar('\n');
-		a2=a2+1;
+		a2 = a2 + 1;
 	}
 }

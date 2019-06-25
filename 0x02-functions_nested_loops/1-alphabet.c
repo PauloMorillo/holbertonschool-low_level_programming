@@ -1,19 +1,20 @@
 #include "holberton.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_alphabet - writes the alphabet between a to z in lowercase.
+ *
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 void print_alphabet(void)
 {
-	char a='a';
+	char a = 'a';
+
 	while (a <= 'z')
 	{
 		_putchar(a);
-		a=a+1;
+		a = a + 1;
 	}
 	_putchar('\n');
 }

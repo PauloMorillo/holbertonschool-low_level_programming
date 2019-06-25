@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <ctype.h>
 /**
- * _putchar - writes the character c to stdout
+ * _islower - returns 1 if is lowercase else 0.
  * @c: The character to print
  *
  * Return: On success 1.
@@ -9,15 +9,15 @@
  */
 int _islower(int c)
 {
-int res;
-	
-res = islower(c);
-if (res == 0)
-{
-return (0);
+	int res;
 
-}
-else {
-return (1);
-}
+	res = islower(c);
+	if (res == 0)
+	{
+		return (0);
+	}
+	else
+{
+		return (1);
+	}
 }

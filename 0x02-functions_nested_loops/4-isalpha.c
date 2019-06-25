@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <ctype.h>
 /**
- * _putchar - writes the character c to stdout
+ * _isalpha - returns 1 if is alpha else returns 0.
  * @c: The character to print
  *
  * Return: On success 1.
@@ -9,15 +9,15 @@
  */
 int _isalpha(int c)
 {
-int res;
-	
-res = isalpha(c);
-if (res == 0)
-{
-return (0);
+	int res;
 
-}
-else {
-return (1);
-}
+	res = isalpha(c);
+	if (res == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (1);
+	}
 }
