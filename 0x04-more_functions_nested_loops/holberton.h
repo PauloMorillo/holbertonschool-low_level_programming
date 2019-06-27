@@ -1,6 +1,7 @@
 #ifndef _holberton_h_
 #define _holberton_h_
 
+void more_numbers(void);
 void print_most_numbers(void);
 void print_numbers(void);
 int _putchar(char c);
