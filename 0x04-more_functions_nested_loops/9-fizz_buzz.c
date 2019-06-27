@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -38,4 +37,5 @@ int main(void)
 			a = a + 1;
 	}
 	printf("\n");
+	return (0);
 }
