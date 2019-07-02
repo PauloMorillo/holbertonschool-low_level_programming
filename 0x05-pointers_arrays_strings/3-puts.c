@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
- *
  * _puts - print the string
- * @a1: is a counter
+ * @str: input pointer
  *
  *
  */
