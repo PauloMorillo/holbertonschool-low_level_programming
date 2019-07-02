@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * puts_half - print all strings with step 2
+ * print_array - print all posix
  * @a: input strings
  * @n: input length of array
  *
@@ -16,11 +16,11 @@ void print_array(int *a, int n)
 	{
 		if (b == n - 1)
 		{
-			printf("%d\n",a[b]);
+			printf("%d\n", a[b]);
 		}
 		else
 		{
-			printf("%d, ",a[b]);
+			printf("%d, ", a[b]);
 		}
 		b = b + 1;
 	}
