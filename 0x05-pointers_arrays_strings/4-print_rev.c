@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _print_rev - print the string in reverse
- *
+ * print_rev - print the string in reverse
+ * @s: input pointer with string
  *
  *
  */
@@ -16,10 +16,10 @@ void print_rev(char *s)
 		/*_putchar(s[a1]);*/
 		a1 = a1 + 1;
 	}
-	while (a1 >= 0)
+	while (a1 > '\0')
 	{
-		_putchar(s[a1]);
 		a1 = a1 - 1;
+		_putchar(s[a1]);
 	}
 	_putchar('\n');
 }
