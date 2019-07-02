@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * rev_string - change positions of the string put in reverse
  * @s: input pointer
@@ -25,7 +24,6 @@ void rev_string(char *s)
 	{
 		a1 = a1 - 1;
 		arre[b] = s[a1];
-		puts(arre);
 		b = b + 1;
 	}
 	while (b >= 0)
