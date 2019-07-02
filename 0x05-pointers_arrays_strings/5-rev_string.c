@@ -1,9 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- *
  * rev_string - change positions of the string put in reverse
- *
+ * @s: input pointer
  *
  *
  */
@@ -12,7 +11,10 @@ void rev_string(char *s)
 {
 	int a1 = 0;
 	int b = 0;
-	char arre [] = "";
+	char arr[] = " ";
+	char *arre;
+
+	arre = arr;
 
 	while (s[a1] != '\0')
 	{
@@ -20,13 +22,15 @@ void rev_string(char *s)
 		a1 = a1 + 1;
 	}
 	while (a1 >= 0)
-        {
-                arre[b]=s[a1];
-                a1 = a1 - 1;
+	{
+		a1 = a1 - 1;
+		arre[b] = s[a1];
+		puts(arre);
 		b = b + 1;
-        }
-	/**puts("esto es lo del puts : ");
-	 *puts(arre);
-	 *puts("ya no es lo ");
-	 */
+	}
+	while (b >= 0)
+	{
+		s[b] = arre[b];
+		b = b - 1;
+	}
 }
