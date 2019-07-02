@@ -3,7 +3,7 @@
 /**
  *
  * _print_rev - print the string in reverse
- *
+ * @a1: variable to count
  *
  *
  */

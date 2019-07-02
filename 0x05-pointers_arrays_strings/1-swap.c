@@ -2,8 +2,9 @@
 
 /**
  *
- * reset_to_98 - change the value of two variable with pointers
- * Description: this function return the swap between two pointers
+ * swap_int - change the value of two variable with pointers
+ * @a: pointer a
+ * @b: pointer b
  */
 
 void swap_int(int *a, int *b)

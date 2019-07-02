@@ -3,7 +3,7 @@
 /**
  *
  * _puts - print the string
- *
+ * @a1: is a counter
  *
  *
  */
