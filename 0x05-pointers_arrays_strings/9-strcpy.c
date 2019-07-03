@@ -20,14 +20,8 @@ char *_strcpy(char *dest, char *src)
 	/*printf("%d longitud",a);*/
 	while (b <= a)
 	{
-		/*if (b == (a - 1))
-		{
-			dest[b] = '\0';
-		}
-		else
-		{*/
-			dest[b] = src[b];
-			/*}*/
+		dest[b] = src[b];
+
 		b = b + 1;
 	}
 	return (dest);
