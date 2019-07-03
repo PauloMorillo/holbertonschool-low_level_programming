@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	int a1 = 0;
 	int b = 0;
-	char arr[] = " ";
+	char arr[500];
 	char *arre;
 
 	arre = arr;
