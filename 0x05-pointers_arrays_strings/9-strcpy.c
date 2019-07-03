@@ -18,16 +18,16 @@ char *_strcpy(char *dest, char *src)
 		a = a + 1;
 	}
 	/*printf("%d longitud",a);*/
-	while (b < a)
+	while (b <= a)
 	{
-		if (b == (a - 1))
+		/*if (b == (a - 1))
 		{
-			dest[b] = '\n';
+			dest[b] = '\0';
 		}
 		else
-		{
+		{*/
 			dest[b] = src[b];
-		}
+			/*}*/
 		b = b + 1;
 	}
 	return (dest);
