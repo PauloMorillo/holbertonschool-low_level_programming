@@ -32,5 +32,9 @@ char *cap_string(char *s1)
 		b = 0;
 		a = a + 1;
 	}
+	if (s1[0] > 96 && s1[0] < 123)
+	{
+		s1[0] = s1[0] - 32;
+	}
 	return (s1);
 }
