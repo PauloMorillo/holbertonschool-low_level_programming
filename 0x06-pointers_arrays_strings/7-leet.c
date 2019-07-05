@@ -24,10 +24,6 @@ char *leet(char *s1)
 			{
 				s1[a] = e[b];
 			}
-			else
-			{
-				s1[a] = s1[a];
-			}
 			b = b + 1;
 		}
 		b = 0;
