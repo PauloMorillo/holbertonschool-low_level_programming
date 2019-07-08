@@ -20,5 +20,12 @@ char *_strchr(char *s, char c)
 		}
 		a = a + 1;
 	}
-	return (NULL);
+	if (a < 1)
+	{
+		return (NULL);
+	}
+	else
+	{
+		return (s = s + a);
+	}
 }
