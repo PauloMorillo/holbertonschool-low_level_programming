@@ -22,6 +22,6 @@ char *_strchr(char *s, char c)
 		}
 		a = a + 1;
 	}
-	s = s + (b + 1);
+	s = s + (a);
 	return (s);
 }
