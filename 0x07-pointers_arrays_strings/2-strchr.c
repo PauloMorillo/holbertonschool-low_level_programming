@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 		}
 		a = a + 1;
 	}
-	if (s[a] == '\0' c == '\0')
+	if (s[a] == '\0' && c == '\0')
 	{
 		return (s = s + a);
 	}
