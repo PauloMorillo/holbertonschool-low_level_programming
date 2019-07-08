@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 		}
 		a = a + 1;
 	}
-	if (a < 1)
+	if (a <= 1)
 	{
 		return (NULL);
 	}
