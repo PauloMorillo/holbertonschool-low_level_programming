@@ -20,12 +20,12 @@ char *_strchr(char *s, char c)
 		}
 		a = a + 1;
 	}
-	if (a <= 1)
+	if (s[a] == '\0' c == '\0')
 	{
-		return (NULL);
+		return (s = s + a);
 	}
 	else
 	{
-		return (s = s + a);
+		return (NULL);
 	}
 }
