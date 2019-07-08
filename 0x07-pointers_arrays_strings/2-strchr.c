@@ -1,0 +1,27 @@
+#include "holberton.h"
+
+/**
+ * _strchr - locates a character in a string
+ * @s: input string
+ * @c: input character to locates in string
+ *
+ * Return: matrix filled.
+ */
+
+char *_strchr(char *s, char c)
+{
+	int a = 0;
+	int b = 0;
+
+	while (s[a] != '\0')
+	{
+		if (s[a] == c)
+		{
+			b = b + 1;
+			break;
+		}
+		a = a + 1;
+	}
+	s = s + (b + 1);
+	return (s);
+}
