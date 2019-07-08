@@ -28,6 +28,13 @@ char *_strpbrk(char *s, char *accept)
 		b = 0;
 		a = a + 1;
 	}
-	s = s + (a - 1);
+	if (c == 0)
+	{
+		s = s + (a);
+	}
+	else
+	{
+		s = s + (a - 1);
+	}
 	return (s);
 }
