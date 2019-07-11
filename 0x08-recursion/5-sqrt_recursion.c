@@ -1,33 +1,26 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- *  _sqrt_recursion - funtion to calculate the factorial of a number
- * @n: string to print
- * @a: input first digit
- * Return: square
+ * check_divisor - find square root
+ * @a: main number
+ * @b: divisor to check if its a square root
+ * Return: natural square root or -1
  */
-int look_multiples(int n, int a)
+int check_divisor(int a, int b)
 {
-	if (n <= 0)
-	{
+	if (b * b == a)
+		return (b);
+	if (b * b > a)
 		return (-1);
-	}
-	if (a * a > n)
-	{
-		return (-1);
-	}
-	if (a * a == n)
-	{
-		return(a);		
-	}
-	else
-	{
-		look_multiples(n, a + 1);
-	}
+	return (check_divisor(a, b + 1));
 }
+/**
+ * _sqrt_recursion - input
+ * @n: number to check for natural square root
+ * Return: natural square root or -1
+ */
 int _sqrt_recursion(int n)
 {
-	int a = 1;
-	
-	return (look_multiples(n, a));
+	if (n > 1 && n < 4)
+		return (-1);
+	return (check_divisor(n, 1));
 }
