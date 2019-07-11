@@ -2,8 +2,8 @@
 /**
  * check_divisor - find square root
  * @a: main number
- * @b: divisor to check if its a square root
- * Return: natural square root or -1
+ * @b: multiples to calculate
+ * Return: root square or -1
  */
 int check_divisor(int a, int b)
 {
@@ -14,9 +14,9 @@ int check_divisor(int a, int b)
 	return (check_divisor(a, b + 1));
 }
 /**
- * _sqrt_recursion - input
- * @n: number to check for natural square root
- * Return: natural square root or -1
+ * _sqrt_recursion - function to calculate root square
+ * @n: number to calculate root square
+ * Return: root square
  */
 int _sqrt_recursion(int n)
 {
