@@ -1,0 +1,1 @@
+this folder has the exercise to learn how to use the arguments of main
