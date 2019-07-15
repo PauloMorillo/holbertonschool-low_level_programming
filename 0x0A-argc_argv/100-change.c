@@ -23,10 +23,7 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			numb = atoi(argv[i]);
-			if (numb < 0)
-			{
-				printf("%d\n", 0);
-			}
+
 			if ((numb == 0 && *argv[i] == '0') || numb > 0 || *argv[i] == '-')
 			{
 				suma = suma + numb;
