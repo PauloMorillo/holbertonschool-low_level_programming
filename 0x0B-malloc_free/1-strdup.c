@@ -23,10 +23,10 @@ char *_strdup(char *str)
 	{
 		a = a + 1;
 	}
-	/*if (a == 0)*/
-	/*{*/
-		/*return (NULL);*/
-		/*}*/
+	if (a == 0)
+	{
+		return (NULL);
+	}
 	P = malloc(a);
 	if (P == NULL)
 	{
