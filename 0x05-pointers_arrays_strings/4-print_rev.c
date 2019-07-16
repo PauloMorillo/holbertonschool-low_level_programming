@@ -16,7 +16,7 @@ void print_rev(char *s)
 		/*_putchar(s[a1]);*/
 		a1 = a1 + 1;
 	}
-	while (a1 > '\0')
+	while (a1 > 0)
 	{
 		a1 = a1 - 1;
 		_putchar(s[a1]);
