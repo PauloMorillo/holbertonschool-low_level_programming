@@ -25,7 +25,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		b = b + 1;
 	}
-	P = malloc(a + b + 2);
+	if (a == 0 || b == 0)
+	{
+	P = malloc(a + b + 1);
+	}
+	else
+	{
+		P = malloc(a + b);
+	}
 	if (P == NULL)
 	{
 		free(P);
