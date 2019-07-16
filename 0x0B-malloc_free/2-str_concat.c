@@ -25,9 +25,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		b = b + 1;
 	}
-	P = malloc(a + b + 1);
+	P = malloc(a + b + 2);
 	if (P == NULL)
 	{
+		free(P);
 		return (NULL);
 	}
 	while (c <= (a + b))
