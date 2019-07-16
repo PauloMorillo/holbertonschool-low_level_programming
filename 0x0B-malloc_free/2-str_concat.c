@@ -25,33 +25,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		b = b + 1;
 	}
-	if (a == 0 || b == 0)
-	{
 	P = malloc(a + b + 1);
-	}
-	else
-	{
-		P = malloc(a + b);
-	}
 	if (P == NULL)
 	{
-		free(P);
 		return (NULL);
 	}
-	while (c <= (a + b))
+	while (c <= a + b)
 	{
 		if (c < a)
 		{
 			P[c] = s1[c];
 		}
-		else if (c >= a && c < a + b)
+		else
 		{
 			P[c] = s2[d];
 			d = d + 1;
-		}
-		if (c == (a + b))
-		{
-			P[c] = '\0';
 		}
 		c = c + 1;
 	}
