@@ -32,11 +32,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	while (b < a)
+	while (b <= a)
 	{
 		P[b] = str[b];
 		b = b + 1;
 	}
-	free(str);
 	return (P);
 }
