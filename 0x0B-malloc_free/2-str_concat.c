@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		b = b + 1;
 	}
-	if (a == 0 || b == 0)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
@@ -36,10 +36,14 @@ char *str_concat(char *s1, char *s2)
 		{
 			P[c] = s1[c];
 		}
-		else
+		else if (c >= a && c < a + b)
 		{
 			P[c] = s2[d];
 			d = d + 1;
+		}
+		if (c == (a + b))
+		{
+			P[c] = '\0';
 		}
 		c = c + 1;
 	}
