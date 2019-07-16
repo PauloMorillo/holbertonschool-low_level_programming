@@ -15,10 +15,6 @@ char *_strdup(char *str)
 	int a = 0;
 	int b = 0;
 
-	if (str[a] == NULL)
-	{
-		return (NULL);
-	}
 	while (str[a] != '\0')
 	{
 		a = a + 1;
@@ -28,6 +24,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	P = malloc(a);
+	if (P == NULL)
+	{
+		return (NULL);
+	}
 	while (b < a)
 	{
 		P[b] = str[b];
