@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
  * _strdup - Create an array with str
  * @str: input strings to save in another memory space
@@ -28,6 +28,10 @@ char *_strdup(char *str)
 	{
 		P[b] = str[b];
 		b = b + 1;
+		if (b == a)
+		{
+			P[b] = str[b];
+		}
 	}
 	return (P);
 }
