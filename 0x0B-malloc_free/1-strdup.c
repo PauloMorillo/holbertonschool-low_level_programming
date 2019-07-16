@@ -15,14 +15,18 @@ char *_strdup(char *str)
 	int a = 0;
 	int b = 0;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (str[a] != '\0')
 	{
 		a = a + 1;
 	}
-	if (a == 0)
-	{
-		return (NULL);
-	}
+	/*if (a == 0)*/
+	/*{*/
+		/*return (NULL);*/
+		/*}*/
 	P = malloc(a);
 	if (P == NULL)
 	{
@@ -32,10 +36,7 @@ char *_strdup(char *str)
 	{
 		P[b] = str[b];
 		b = b + 1;
-		if (b == a)
-		{
-			P[b] = '\0';
-		}
 	}
+	free(str);
 	return (P);
 }
