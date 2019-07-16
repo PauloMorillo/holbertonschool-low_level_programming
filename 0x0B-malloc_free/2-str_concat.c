@@ -25,11 +25,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		b = b + 1;
 	}
-	if (s1 == NULL && s2 == NULL)
+	P = malloc(a + b + 1);
+	if (P == NULL)
 	{
 		return (NULL);
 	}
-	P = malloc(a + b + 1);
 	while (c <= (a + b))
 	{
 		if (c < a)
