@@ -17,20 +17,27 @@ char *str_concat(char *s1, char *s2)
 	int c = 0;
 	int d = 0;
 
-	while (s1[a] != '\0')
+	if (s1 != NULL)
 	{
-		a = a + 1;
+		while (s1[a] != '\0')
+		{
+			a = a + 1;
+		}
+
 	}
-	while (s2[b] != '\0')
+	if (s2 != NULL)
 	{
-		b = b + 1;
+		while (s2[b] != '\0')
+		{
+			b = b + 1;
+		}
 	}
 	P = malloc(a + b + 1);
 	if (P == NULL)
 	{
 		return (NULL);
 	}
-	while (c <= a + b)
+	while (c < a + b)
 	{
 		if (c < a)
 		{
