@@ -30,7 +30,7 @@ char *_strdup(char *str)
 		b = b + 1;
 		if (b == a)
 		{
-			P[b] = str[b];
+			P[b] = '\0';
 		}
 	}
 	return (P);
