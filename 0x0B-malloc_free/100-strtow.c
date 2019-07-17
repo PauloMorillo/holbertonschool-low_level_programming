@@ -11,40 +11,17 @@
 
 char **strtow(char *str)
 {
-	char *P;
+	char **P;
 	int i = 0;
-	int j = 0;
-	int size = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	while (i < ac)
+	while (str[i] != '\0')
 	{
-		while (av[i][j] != '\0')
-		{
-			j = j + 1;
-		}
-		size = size + j + 1;
-		j = 0;
-		i++;
+		i = i + 1;
 	}
-	P = malloc(size + 1);
-	if (P == NULL)
-	{
-		free(P);
-		return (NULL);
-	}
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++, P++)
-		{
-			*P = av[i][j];
-		}
-		*P = '\n';
-		P = P + 1;
-	}
-	P = P - size;
+	P = malloc(i + 1);
 	return (P);
 }
