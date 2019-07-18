@@ -5,7 +5,7 @@
  * @ptr: Pointer to memory to reallocate
  * @old_size: size of pointer elements
  * @new_size: new size for reallocate
- * Return: do not return.
+ * Return: Pointer witn new allocate or null.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -18,8 +18,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		P = malloc(new_size);
 		if (P == NULL)
+		{
 			free(P);
 			return (NULL);
+		}
 	}
 	if (new_size == 0 && ptr != NULL)
 	{
