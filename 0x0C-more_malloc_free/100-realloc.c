@@ -34,7 +34,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(P);
 			return (NULL);
 		}
-		while (a < old_size)
+		while (a < old_size && a < new_size)
 		{
 			P[a] = ((char *)ptr)[a];
 			a = a + 1;
