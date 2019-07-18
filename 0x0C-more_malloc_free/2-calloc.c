@@ -24,5 +24,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		P[a] = 0;
 		a = a + 1;
 	}
-	return (P);
+	return ((void *)P);
 }
