@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(P);
 		return (NULL);
 	}
-	while (a < nmemb)
+	while (a < nmemb * size)
 	{
 		P[a] = 0;
 		a = a + 1;
