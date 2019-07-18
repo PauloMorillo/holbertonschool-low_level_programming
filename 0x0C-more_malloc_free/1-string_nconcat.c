@@ -13,10 +13,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int a = 0, lens2 = n, b = 0, c = 0;
 
 	if (s1 != NULL)
-	{
 		while (s1[a] != '\0')
 			a = a + 1;
-	}
 	if (s2 != NULL)
 		while (s2[b] != '\0')
 			b++;
@@ -28,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		free(P);
 		return (NULL);
 	}
-	while (c <= (a + lens2 - 1))
+	while (c < (a + lens2))
 	{
 		if (c < a)
 			P[c] = s1[c];
@@ -36,5 +34,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			P[c] = s2[c - a];
 		c = c + 1;
 	}
+	P[c] = '\0';
 	return (P);
 }
