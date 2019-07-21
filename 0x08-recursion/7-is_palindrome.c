@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * lengthw - function to know the length of the word
  * @s: word
@@ -12,26 +11,6 @@ int lengthw(char *s)
 		return ((1 + lengthw(s + 1)));
 	}
 	return (0);
-}
-/**
- * is_palindrome - function to know if a word is a palindrome
- * @s: word to know if is a pailindrome
- * Return: truth statement - boolean
- */
-int is_palindrome(char *s)
-{
-	int a = 0, res;
-
-	if (*s != '\0')
-	{
-		a = lengthw(s);
-		res = voidword(s, a, 0, a / 2);
-		return (res);
-	}
-	else
-	{
-		return (0);
-	}
 }
 /**
  * voidword - know letter by letter if is palindrome
@@ -55,5 +34,24 @@ int voidword(char *s, int a, int b, int med)
 		}
 	}
 	return (1);
+}
+/**
+ * is_palindrome - function to know if a word is a palindrome
+ * @s: word to know if is a pailindrome
+ * Return: truth statement - boolean
+ */
+int is_palindrome(char *s)
+{
+	int a = 0, res;
 
+	if (*s != '\0')
+	{
+		a = lengthw(s);
+		res = voidword(s, a, 0, a / 2);
+		return (res);
+	}
+	else
+	{
+		return (0);
+	}
 }
