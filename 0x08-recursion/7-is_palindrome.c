@@ -26,7 +26,7 @@ int voidword(char *s, int a, int b, int med)
 	{
 		if (s[b] == s[a - 1])
 		{
-			voidword(s, a - 1, b + 1, med);
+			return (1 * voidword(s, a - 1, b + 1, med));
 		}
 		else
 		{
