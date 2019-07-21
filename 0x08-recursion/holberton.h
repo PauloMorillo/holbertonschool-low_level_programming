@@ -1,6 +1,7 @@
 #ifndef _holberton_h_
 #define _holberton_h_
 
+int voidword(char *s, int a, int b, int med);
 void print_square(int size);
 void _puts(char *str);
 char *_strcpy(char *dest, char *src);
