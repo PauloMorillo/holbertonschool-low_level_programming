@@ -9,9 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
-	int suma;
-	int numb;
+	int i, j, suma, numb;
 
 	if (argc == 1)
 	{
@@ -26,15 +24,12 @@ int main(int argc, char *argv[])
 			suma = suma + numb;
 			for (j = 0; argv[i][j] != '\0' ; j++)
 			{
-				/*printf("%c valor entrante ", argv[i][j];*/
-				/*if (argv[i][j] < '0' && argv[i][j] > '9')*/
 				if (isdigit(argv[i][j]) == 0)
 				{
 					printf("Error\n");
 					return (1);
 				}
 			}
-			/*printf("%s argumento ", argv[i]);*/
 		}
 		printf("%d\n", suma);
 	}
