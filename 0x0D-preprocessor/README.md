@@ -1,0 +1,1 @@
+this folder has exercise to learn how to use object-like macros
