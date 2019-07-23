@@ -1,26 +1,65 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * new_dog - creates new data for dog
+ * _strlen - string length
+ * @str: input string
+ * Return: string length int
+ */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+		i = i + 1;
+	return (i);
+}
+/**
+ * _strcpy - copies string
+ * @dest: pointer to new string
+ * @from: pointer to string to copy
+ * Return: void
+ */
+void _strcpy(char *dest, char *from)
+{
+	int i, len = _strlen(from);
+
+	for (i = 0; i <= len; i++)
+		dest[i] = from[i];
+}
+/**
+ * new_dog - creates new type of struct dog
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
- * Return: return pointer with the structure or null
+ * Return: pointer
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newd = malloc(sizeof(dog_t));
+	int name_len = _strlen(name), owner_len = _strlen(owner);
+	dog_t *newd;
 
-	if (newd != NULL)
+	newd = malloc(sizeof(dog_t));
+	if (newd)
 	{
-		newd->name = name;
-		newd->age = age;
-		newd->owner = owner;
-		return (newd);
+		newd->name = malloc(sizeof(char) * (name_len + 1));
+		if (newd->name)
+		{
+			newd->owner = malloc(sizeof(char) * (owner_len + 1));
+			if (newd->owner)
+			{
+				_strcpy(newd->name, name);
+				newd->age = age;
+				_strcpy(newd->owner, owner);
+				return (newd);
+			}
+			else
+			{
+				free(newd->name);
+				free(newd);
+			}
+		}
+		else
+			free(newd);
 	}
-	else
-	{
-		return (NULL);
-	}
-	return (newd);
+	return (NULL);
 }
