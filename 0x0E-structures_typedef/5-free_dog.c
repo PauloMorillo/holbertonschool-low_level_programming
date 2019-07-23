@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * free_dog - initialize a variable of tyoe struct dog
  * @d: addres of structure
