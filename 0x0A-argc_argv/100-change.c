@@ -4,37 +4,32 @@
  * main - check the code for Holberton School students.
  * @argc: input the number or arguments in commandline
  * @argv: input the array of arguments in commandline
- * Return: Always 0.
+ * Return: numbers of coins for change or null.
  */
-
 int main(int argc, char *argv[])
 {
-	int i;
-	int suma;
-	int numb;
+	int coin = 0, count, numb;
 
-	if (argc == 1)
+	if (argc > 1 && argc < 3)
 	{
-		printf("%d\n", 0);
-		return (0);
-	}
-	if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
+		numb = atoi(argv[1]);
+		while (numb > 0)
 		{
-			numb = atoi(argv[i]);
-
-			if ((numb == 0 && *argv[i] == '0') || numb > 0 || *argv[i] == '-')
-			{
-				suma = suma + numb;
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			if (numb >= 25)
+				count = 25;
+			else if (numb >= 10 && count == 0)
+				count = 10;
+			else if (numb >= 5 && count == 0)
+				count = 15;
+			else if (numb >= 2 && count == 0)
+				count = 2;
+			else if (numb >= 1 && count == 0)
+				count = 1;
+			coin = coin + 1;
+			numb = numb - count;
+			count = 0;
 		}
-		printf("%d\n", suma);
+		printf("%d\n", coin);
 	}
 	else
 	{

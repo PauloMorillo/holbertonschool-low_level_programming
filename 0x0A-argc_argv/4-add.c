@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - check the code for Holberton School students.
  * @argc: input the number or arguments in commandline
@@ -9,9 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int suma;
-	int numb;
+	int i, j, suma, numb;
 
 	if (argc == 1)
 	{
@@ -23,14 +22,14 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			numb = atoi(argv[i]);
-			if ((numb == 0 && *argv[i] == '0') || numb > 0 || *argv[i] == '-')
+			suma = suma + numb;
+			for (j = 0; argv[i][j] != '\0' ; j++)
 			{
-				suma = suma + numb;
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
+				if (isdigit(argv[i][j]) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 		}
 		printf("%d\n", suma);

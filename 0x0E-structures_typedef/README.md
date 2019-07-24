@@ -1,0 +1,1 @@
+This directory has the exercise about structures
