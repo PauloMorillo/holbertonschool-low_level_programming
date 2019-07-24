@@ -1,0 +1,1 @@
+this directory has exercise to learn how to use pointers to functions
