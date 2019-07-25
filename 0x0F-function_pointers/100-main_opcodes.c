@@ -21,10 +21,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < atoi(argv[1]); i++)
-	{
-		printf("%02x ", p[i] & 0xFF);
-	}
-	printf("\n");
+/*	for (i = 0; i < atoi(argv[1]); i++)*/
+/*	printf("%02x ", p[i] & 0xFF); */
+/*	printf("\n"); */
 	return (0);
 }
