@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	char *p = (char *) &main;
+	int a = 0;
 
 	if (argc != 2)
 	{
@@ -21,8 +22,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-
-	for (i = 0; i < *argv[1]; i++)
+	a = atoi(argv[1]);
+	for (i = 0; i < a; i++)
 	{
 		printf("%02x\n", p[i] & 0xFF);
 	}
