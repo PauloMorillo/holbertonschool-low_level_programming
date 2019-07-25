@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < *argv[1]; i++)
 	{
-		printf("%d\n", p[i] & 0xFF);
+		printf("%02x\n", p[i] & 0xFF);
 	}
 	return (0);
 }
