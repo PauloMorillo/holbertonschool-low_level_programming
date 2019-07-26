@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include "variadic_functions.h"
+#include <stdarg.h>
+/**
+ * printch - Function to print all the arguments with separator.
+ * valist: pointer to separator to print
+ * Return: do not return
+ */
+void printch(va_list valist)
+{
+	printf("%c",va_arg(valist, char));
+}
+/**
+ * prints - Function to print all the arguments with separator.
+ * valist: pointer to separator to print
+ * Return: do not return
+ */
+void prints(va_list valist)
+{
+        printf("%s",va_arg(valist, char *));
+}
+/**
+ * printi - Function to print all the arguments with separator.
+ * valist: pointer to separator to print
+ * Return: do not return
+ */
+void printi(va_list valist)
+{
+        printf("%d",va_arg(valist, int));
+}
+
+/**
+ * printi - Function to print all the arguments with separator.
+ * valist: pointer to separator to print
+ * Return: do not return
+ */
+void printflo(va_list valist)
+{
+        printf("%f",va_arg(valist, float));
+}
+
+
+
+/**
+ * print_numbers - Function to print all the arguments with separator.
+ * @separator: pointer to separator to print
+ * @n: length of arguments
+ * Return: the sum of all or 0.
+ */
+void print_all(const char * const format, ...)
+{
+	va_list valist;
+	char *va;
+	int b = 0;
+	int d = 0;
+
+	formatico ops[] = {
+		{"c", printch},
+		{"s", prints},
+		{"i", printi},
+		{"f", printflo}
+	};
+
+	va_start(valist, format);
+
+	va = va_arg(valist, char *);
+	while (va[b] != 0 && c == 0)
+       	{
+			while (d < 4)
+			{
+				if (va[b] == ops[d].forma)
+				{
+					if (b != 0)
+						printf("\n");
+					ops[d].f(valist);
+				}
+				d = d + 1;
+			}
+			b = b + 1;
+		}
+		printf("\n");
+		va_end(valist);
+	}
+}
