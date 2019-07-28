@@ -14,22 +14,22 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 	int a = 0;
 
-	if (separator)
+	va_start(valist, n);
+	while (i < n)
 	{
-		va_start(valist, n);
-		while (i < n)
+		va = va_arg(valist, int);
+		printf("%d", va);
+		if (separator)
 		{
-			va = va_arg(valist, int);
-			printf("%d", va);
 			while (separator[a] != '\0' && i < n - 1)
 			{
 				printf("%c", separator[a]);
 				a = a + 1;
 			}
 			a = 0;
-			i = i + 1;
 		}
+		i = i + 1;
+	}
 		printf("\n");
 		va_end(valist);
-	}
 }
