@@ -46,7 +46,7 @@ void printi(va_list valist)
  */
 void printflo(va_list valist)
 {
-	printf("%f", va_arg(valist, double));
+	printf("%f", (float)va_arg(valist, double));
 }
 
 
