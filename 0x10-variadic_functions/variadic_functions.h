@@ -1,11 +1,20 @@
 #ifndef _VARIADIC_FUNCTIONS_H_
 #define _VARIADIC_FUNCTIONS_H_
 #include <stdarg.h>
-typedef struct formatarg {
 
+/**
+ * struct formatarg - Struct of elements
+ * @forma: Dog's name
+ * @f: dog's age
+ *
+ * Description: Longer description
+ */
+typedef struct formatarg
+{
 	char forma;
 	void (*f)(va_list);
-}formatico;
+
+} formatico;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
