@@ -8,7 +8,7 @@
  */
 void printch(va_list valist)
 {
-	printf("%c",va_arg(valist, char));
+	printf("%c",va_arg(valist, int) - '0');
 }
 /**
  * prints - Function to print all the arguments with separator.
@@ -36,7 +36,7 @@ void printi(va_list valist)
  */
 void printflo(va_list valist)
 {
-        printf("%f",va_arg(valist, float));
+        printf("%f",va_arg(valist, double));
 }
 
 
@@ -64,11 +64,11 @@ void print_all(const char * const format, ...)
 	va_start(valist, format);
 
 	va = va_arg(valist, char *);
-	while (va[b] != 0 && c == 0)
+	while (va[b] != 0)
        	{
 			while (d < 4)
 			{
-				if (va[b] == ops[d].forma)
+				if (va[b] == *(ops[d].forma))
 				{
 					if (b != 0)
 						printf("\n");
@@ -77,7 +77,6 @@ void print_all(const char * const format, ...)
 				d = d + 1;
 			}
 			b = b + 1;
-		}
 		printf("\n");
 		va_end(valist);
 	}
