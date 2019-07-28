@@ -20,15 +20,16 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		va = va_arg(valist, char *);
 		if (va == NULL)
-		{
 			printf("nil");
-		}
-		while (va[b] != 0)
+		else
 		{
-			printf("%c", va[b]);
-			b = b + 1;
+			while (va[b] != '\0')
+			{
+				printf("%c", va[b]);
+				b = b + 1;
+			}
+			b = 0;
 		}
-		b = 0;
 		if (separator)
 		{
 			while (separator[a] != '\0' && i < n - 1)
@@ -40,6 +41,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		i = i + 1;
 	}
-		printf("\n");
-		va_end(valist);
+	printf("\n");
+	va_end(valist);
 }
