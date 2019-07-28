@@ -2,7 +2,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * print_numbers - Function to print all the arguments with separator.
+ * print_strings - Function to print all the arguments with separator.
  * @separator: pointer to separator to print
  * @n: length of arguments
  * Return: the sum of all or 0.
@@ -15,31 +15,31 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	int a = 0;
 	int b = 0;
 
-	if (separator)
+	va_start(valist, n);
+	while (i < n)
 	{
-		va_start(valist, n);
-		while (i < n)
+		va = va_arg(valist, char *);
+		if (va == NULL)
 		{
-			va = va_arg(valist, char *);
-			if (va[0] == NULL)
-			{
-				printf("nil");
-			}
-			while (va[b] != 0)
-			{
-				printf("%c", va[b]);
-				b = b + 1;
-			}
-			b = 0;
+			printf("nil");
+		}
+		while (va[b] != 0)
+		{
+			printf("%c", va[b]);
+			b = b + 1;
+		}
+		b = 0;
+		if (separator)
+		{
 			while (separator[a] != '\0' && i < n - 1)
 			{
 				printf("%c", separator[a]);
 				a = a + 1;
 			}
 			a = 0;
-			i = i + 1;
 		}
+		i = i + 1;
+	}
 		printf("\n");
 		va_end(valist);
-	}
 }
