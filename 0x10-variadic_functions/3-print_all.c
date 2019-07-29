@@ -58,6 +58,7 @@ void print_all(const char * const format, ...)
 	va_list valist;
 	int b = 0;
 	int d = 0;
+	int c = 0;
 
 	formatico ops[] = {
 		{"c", printch},
@@ -73,13 +74,14 @@ void print_all(const char * const format, ...)
 		{
 			if (format[b] == *(ops[d].forma))
 			{
-				switch (d)
+				switch (c)
 				{
 				case 0:
 					break;
 				default:
 					printf(", ");
 				}
+				c = 1;
 				ops[d].f(valist);
 				d = 4;
 			}
