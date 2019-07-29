@@ -2,32 +2,29 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * printch - Function to print all the arguments with separator.
- * @valist: pointer to separator to print
- * Return: do not return
- */
-void printch(va_list valist)
-{
-	int car = va_arg(valist, int);
-
-	switch (car)
-	{
-	case 0:
-		printf("(nil)");
-		break;
-	default:
-		printf("%c", (char)car);
-		break;
-	}
-}
-/**
  * prints - Function to print all the arguments with separator.
  * @valist: pointer to separator to print
  * Return: do not return
  */
 void prints(va_list valist)
 {
-	printf("%s", va_arg(valist, char *));
+	char *car = va_arg(valist, char *);
+
+	if (car == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", car);
+}
+/**
+ * printch - Function to print all the arguments with separator.
+ * @valist: pointer to separator to print
+ * Return: do not return
+ */
+void printch(va_list valist)
+{
+	printf("%c", (char)va_arg(valist, int));
 }
 /**
  * printi - Function to print all the arguments with separator.
@@ -76,8 +73,13 @@ void print_all(const char * const format, ...)
 		{
 			if (format[b] == *(ops[d].forma))
 			{
-				if (b != 0)
+				switch (b)
+				{
+				case 0:
+					break;
+				default:
 					printf(", ");
+				}
 				ops[d].f(valist);
 				d = 4;
 			}
