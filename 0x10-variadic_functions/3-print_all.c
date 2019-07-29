@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[b] == *(ops[d].forma))
 			{
-				switch (b)
+				switch (d)
 				{
 				case 0:
 					break;
