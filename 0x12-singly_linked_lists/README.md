@@ -1,0 +1,1 @@
+This folder has the exercise to understand linked lists
