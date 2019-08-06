@@ -4,7 +4,8 @@
 
 /**
  * add_nodeint - add int element to the list
- *
+ * @head: pointer to the head of the list
+ * @n: number to add to the top of the list
  * Return: Address of new elements.
  */
 

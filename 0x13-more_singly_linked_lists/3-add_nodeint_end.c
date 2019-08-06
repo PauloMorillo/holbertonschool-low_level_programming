@@ -3,8 +3,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint - add int element to the list
- *
+ * add_nodeint_end - add int element to the end of the list
+ * @head: pointer to the head of the list
+ * @n: number to index at the top
  * Return: Address of new elements.
  */
 

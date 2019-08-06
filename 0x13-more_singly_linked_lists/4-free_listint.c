@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * free_listint - free list memory
+ * @head: pointer to the head of the list
+ * Return: do not return
  */
 
 void free_listint(listint_t *head)

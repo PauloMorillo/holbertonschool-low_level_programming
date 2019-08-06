@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_listint - print a list of integers
+ * @h: pointer to the head of the list
+ * Return: length of the list
  */
 
 size_t print_listint(const listint_t *h)

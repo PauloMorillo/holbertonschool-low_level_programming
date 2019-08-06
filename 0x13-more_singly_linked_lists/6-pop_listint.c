@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint - add int element to the list
- *
- * Return: Address of new elements.
+ * pop_listint - remove the head note of a list
+ * @head: pointer to the head of the list
+ * Return: data to the removed node
  */
 
 int pop_listint(listint_t **head)
