@@ -11,6 +11,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	int len = 0;
 
 	numc = n;
+	if (index > 32)
+		return (-1);
 	while ((numc >>= 1) > 0)
 	{
 		len++;
