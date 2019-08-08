@@ -1,0 +1,1 @@
+this folder has the exercise for understand bit manipulation in C
