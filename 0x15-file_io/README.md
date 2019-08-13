@@ -1,0 +1,1 @@
+This folder has the exercises to use system calls and learn about file descriptors 
