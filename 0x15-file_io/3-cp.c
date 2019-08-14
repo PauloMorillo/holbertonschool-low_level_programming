@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	clo = close(fd);
 	if (clo == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 	fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	clo = close(fd);
 	if (clo == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
 	}
 	return (0);
