@@ -1,9 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include <stdio.h>
 /**
  * main - program to copies the content from file to another
@@ -22,8 +17,13 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	len = read(fd, buff, 1024);
-	if (fd == -1 || len == -1)
+	if (len == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	lenw = write(fd, buff, len);
-	if (fd == -1 || lenw == -1)
+	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+	lenw = write(fd, buff, len);
 	clo = close(fd);
 	if (clo == -1)
 	{
