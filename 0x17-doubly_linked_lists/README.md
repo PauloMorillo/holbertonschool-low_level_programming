@@ -1,0 +1,1 @@
+This directory has the exercise to understand doubly linked list
