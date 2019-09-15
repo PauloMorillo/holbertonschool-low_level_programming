@@ -18,7 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	new->n = n;
 	current = *h;
-	if (idx == 0 && *h ==NULL)
+	if (idx == 0 && *h == NULL)
 	{
 		*h = new;
 		return (new);
@@ -34,25 +34,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	while (current->next != NULL)
 	{
 		if (pos == idx)
-		{
-			new->next = current;
-			new->prev = current->prev;
-			prev->next = new;
-			current->prev = new;
-			return (new);
-		}
+			return (mid(current, new, prev));
 		prev = current;
 		current = current->next;
 		pos++;
 	}
 	if (pos == idx)
-	{
-		new->next = current;
-		new->prev = current->prev;
-		prev->next = new;
-		current->prev = new;
-		return (new);
-	}
+		return (mid(current, new, prev));
 	if (idx == pos + 1)
 	{
 		new->next = NULL;
@@ -61,4 +49,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new);
 	}
 	return (NULL);
+}
+/**
+ * mid - funtion to index at mid of the list
+ * @current: pinter to current position
+ * @new: pointer to new node
+ * @prev: pointer to previous node
+ * Return: New node
+ */
+dlistint_t *mid(dlistint_t *current, dlistint_t *new, dlistint_t *prev)
+{
+	new->next = current;
+	new->prev = current->prev;
+	prev->next = new;
+	current->prev = new;
+	return (new);
 }
