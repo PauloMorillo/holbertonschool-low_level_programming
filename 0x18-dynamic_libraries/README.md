@@ -1,0 +1,1 @@
+This folder has the information about dynamic libraries
