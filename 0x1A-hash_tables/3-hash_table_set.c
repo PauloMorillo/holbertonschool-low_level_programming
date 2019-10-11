@@ -13,9 +13,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *temp, *new;
 	int flag = 0;
 
-	if (key)
+	if (key && strlen(key) > 0)
 	{
-		idx = (hash_djb2((unsigned char *) key)) % ht->size;
+		idx = key_index((unsigned char *) key, ht->size);
 		new = malloc(sizeof(hash_node_t));
 		if (new == NULL)
 			return (0);
@@ -34,6 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				if (strcmp(temp->key, key) == 0)
 				{
+					free(temp->value);
 					temp->value = (char *)value;
 					flag = 1;
 					free(new);
