@@ -1,0 +1,1 @@
+This directory has the exercises to learn hash tables
