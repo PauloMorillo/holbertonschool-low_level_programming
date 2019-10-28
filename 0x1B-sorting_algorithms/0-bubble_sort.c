@@ -7,10 +7,10 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t a = 1;
+	size_t a = 1, b = 1;
 	int temp = 0;
 
-	if (size > 0)
+	if (size > 2)
 	{
 		while (a < size)
 		{
@@ -18,9 +18,23 @@ void bubble_sort(int *array, size_t size)
 			{
 				temp = array[a];
 				array[a] = array[a - 1];
-				array[a - 1] = array[a];
+				array[a - 1] = temp;
+				print_array(array, size);
+			}
+			else
+			{
+				b = b + 1;
 			}
 			a = a + 1;
+			if (b == size && a == size)
+			{
+				break;
+			}
+			else if (a  == size)
+			{
+				a = 1;
+				b = 1;
+			}
 		}
 	}
 }
