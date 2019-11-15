@@ -10,12 +10,12 @@ all: $(OBJ) m.h
 # %.o:%.c
 # 	$(CC) $(CFLAGS) -c -o
 
-clean:
+clean: all
 	$(RM) -f *~ $(NAME)
 
-oclean:
+oclean: all
 	$(RM) -f $(OBJ)
 
-fclean: clean oclean
+fclean: all clean oclean
 
 re: oclean all
