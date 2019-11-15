@@ -2,9 +2,5 @@ CC = gcc
 SRC = main.c holberton.c
 OBJ = main.o holberton.o
 NAME = holberton
-all: programa
-
-main.o: $(SRC) m.h
-
-programa: $(OBJ)
+all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
