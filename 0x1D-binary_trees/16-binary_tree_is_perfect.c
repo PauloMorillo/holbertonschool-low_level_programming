@@ -11,23 +11,26 @@ int binary_tree_sizea(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int h = 0;
-	int ful = 0;
+	int ful = 1;
 	int h2 = 0;
+	int fulpo = 0;
 
 	if (tree)
 	{
 		h = binary_tree_heighta(tree);
-		while (h >= 0)
+		while (h > 0)
 		{
+			ful = 1;
 			h2 = h;
 			while (h2 > 0)
 			{
-				ful = ful + (2);
+				ful = ful * (2);
 				h2 = h2 - 1;
 			}
+			fulpo = fulpo + ful;
 			h = h - 1;
 		}
-		if (ful + 1 == binary_tree_sizea(tree))
+		if (fulpo + 1 == binary_tree_sizea(tree))
 			return (1);
 	}
 	return (0);
