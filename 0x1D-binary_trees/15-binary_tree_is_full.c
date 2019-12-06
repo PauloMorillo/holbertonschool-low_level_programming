@@ -27,8 +27,6 @@ int binary_tree_is_full(const binary_tree_t *tree)
 			}
 			h = h - 1;
 		}
-		if (ful == 0)
-			ful = -100;
 		if (ful + 1 == binary_tree_sizea(tree))
 			return (1);
 	}
